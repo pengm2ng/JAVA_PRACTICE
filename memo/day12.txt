@@ -1,0 +1,49 @@
+Set extends Collection
+
+Set은 집합이다.
+집합은 중복집합이 아니라면 중복되는 원소를 포함할 수 없다.
+
+값(데이터, 객체)을 중복해서 저장하지 않는다.
+저장된 값들은 인덱스가 없기 때문에 저장 순서가 고정되어 있지 않다.
+
+구현 클래스
+
+HashSet
+
+size() : 크기
+add() : 값 추가
+remove(Object o) : 값 삭제
+contains(Object o) : 검사(값의 여부)
+
+iterator() : 검색(순서 부여)
+
+Set은 검색의 목적이 있기 때문에 순서 정보를 관리할 필요가 없다.
+따라서 데이터 크기에 상관없이 검색, 검사에 걸리는 시간이 매우 짧다.
+반면 ArrayList는 index를 관리해야 하기 때문에 상대적으로 시간이 오래 걸린다.
+그러므로 기능적 차이가 없다면 HashSet을 써야 한다.
+
+Map
+
+HashMap
+
+Key와 Value 를 한쌍으로 저장한다.
+그러므로 검색에 용이하다.
+[key, value] 한쌍을 Entry라고 한다.
+
+key는 중복이 불가능하며(set)
+Value는 가능하다. (collection)
+
+키 <-> 해시테이블 <-> 값
+
+Map 자료구조는 순서를 따지지 않기 때문에 Set으로 묶은 후
+Iterator를 통해 순서를 부여받아서 나와야 한다.
+
+HashMap<k, v> 객체명 = new HashMap<>();
+
+containsKey(object key) : 키가 있는지 검사
+containsValue(object Value) : 값이 있는지 검사
+put(object key, object value) : 한 쌍 넣기
+get(object key) : 키 값으 주면 그 짝인 값을 리터한다.
+isEmpty( ) : 비어있는지 확인
+keySet( ) : HashMap에 저장된 모든 키가 저장된 형태
+values( ) : HashMap에 저장된 모든 값이 저장된 형태

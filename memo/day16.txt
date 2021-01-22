@@ -1,0 +1,49 @@
+GUI
+
+
+
+AWT
+	운영체제의 특징에 따라 화면을 구성한다.
+	(운영체제마다 다른 느낌으로 구현된다.)
+
+	
+SWING
+	자바에서 지정되는 look&feel을 적용하여
+	모든 운영체제에서 동일하게 구현된다.
+
+Container
+	창을 컨테인라고 한다.
+	반드시 한 개 이상이 존재해야 하며, 컨테이너 위에 컴포넌트가 올라간다.
+awt	Frame,Panel...
+swing	JPanel, JFrame
+
+
+Component
+	실제로 컨테이너 위에 올라간 후 하면 구성을 담당하는 것들.
+awt 	Button, TextField
+swing	JButton, JTextField
+
+LayoutManager
+	컨테이너 위에 컴포넌트를 올릴 때 위치, 크기 등을 지정하는 것들.
+
+	BorderLayout, GridLayout, CardLayout, FlowLayout
+	
+Frame 클래스 객체를 생성해서 윈도우 만들기
+Frame window = new Frame();		: 제목 없는 윈도우
+Frame window = new Frame("타이틀")	: 제목 있는 윈도우
+
+window.setTitle("타이틀변경");		: 제목 변경
+window.setSize(width, height);	: 크기 변경
+window.setLocation(x,y);		: 위치 변경
+window.setBounds(x,y,width,height);	: 위치와 크기 동시 변경
+window.setBackground(bgcolor);	: 윈도우 배경색 변경
+
+Frame 클래스를 사용해서 생성한 윈도우 닫기
+
+윈도우 닫기 버튼을 클릭하면 자동으로 실행되는
+windowClosing() 메소드를 overriding해서 윈도우를 닫는 코드를 넣어준다.
+
+system.exit(0);		:0코드는 이상없이 종료라는 뜻, 모든 프로그램 종료
+window.dispose();		:그 객체 창만 종료
+window.setVisible(false);	:그 객체의 창이 실행중이지만 눈에 보이지 않게 숨김
+window.setVisible(true);
